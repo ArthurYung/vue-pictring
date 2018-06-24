@@ -1,18 +1,8 @@
 # vue-pictring
 
-> A Vue.js project
+> 一个基于vue的移动端图片上传插件
 
-## Build Setup
+* 多选／拍照
+* 图片预览／删除
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
