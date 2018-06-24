@@ -35,7 +35,18 @@ Vue.use(pictring, {
 * 图片上传
 > 由于上传图片方式的多样性，插件中上传方法只是将图片数据返回成数组或是FormData对象，再由用户自定义上传。
 ```js
-this.$refs.$demo.up() // 根据用户使用插件时所选的type来返回FormData或是base64数组
+ let files = this.$refs.$demo.up() // 根据用户使用插件时所选的type来返回FormData或是base64数组
+ $.ajax({
+    type : "POST",
+    url : "test.aspx",
+    data : files,
+    success : function(data) {
+        alert('上传成功！')
+    },
+    error : function(){
+        alert("错误")
+    }
+ });
 ```
 
 * 清空图片
