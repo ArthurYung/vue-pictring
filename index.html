@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-pictring</title>
+    <!-- <link rel='stylesheet' type='text/css' href="./dest/build.css"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+      body{
+        margin: 0;
+        padding-top: 34px
+      }
+      .saybox{
+        width: 84vw;
+        margin: 0 auto;
+        position: relative;
+        line-height: 20px;
+        word-wrap:break-word;
+        font-size: 18px;
+        min-height: 44px;
+        font-family: Arial, Helvetica, sans-serif, '微软雅黑';
+        margin-bottom: 20px
+      }
+      .saybox textarea{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        font-size: 18px;
+        line-height: 20px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif, '微软雅黑'
+      }
+      input,textarea,button{
+        box-sizing: border-box;
+        border: none;
+        padding: 0;
+        outline: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+        color: #666
+      }
+      input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
+        color: #ccc
+      }
+      .top{
+         margin-top: 46px;
+         border-top: 1px solid #efefef;
+      }
+      button{
+        background: #fff;
+        width: 100%;
+        font-size: 18px;
+        color: #14acf5;
+        border-bottom: 1px solid #efefef;
+        line-height: 54px;
+      }
+    </style>
+    </head>
+    <body>
+    <div id="app">
+      <div class="saybox">
+        {{saysome}}
+        <textarea ref='tarea' type='text' v-model='saysome' placeholder='说点什么吧~'></textarea>
+      </div>
+      <vue-pictring ref="test"></vue-pictring>
+       <button class="top" @click='go'>上传</button>
+       <button @click='empty'>清空</button>
+    </div>
+    <script src='/dist/vuePictring.js'></script>
+  </body>
+</html>
