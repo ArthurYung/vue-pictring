@@ -17,7 +17,7 @@ let vuePic = {
         return {
           max: options.max || 9,
           type: options.img || 'img',
-          compress: options.compress || '0.8',
+          compress: options.compress ? options.compress :  options.compress ===0 ? 0 : '0.8',
           size: options.size || '80',
           version: 'v1.0.0'
         }
